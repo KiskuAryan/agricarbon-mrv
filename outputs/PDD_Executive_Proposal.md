@@ -3,7 +3,7 @@
 **Target Host Geography:** Indo-Gangetic Basin (India) & Southeast Asia (Mekong Delta & Central Luzon)  
 **Standard & Methodology:** Verra VCS (CDM AMS-III.AU) / J-Credit Scheme (AG-001)  
 **Project Developer:** AgriCarbon Project Consortium / Nature-Based Solutions Developer  
-**Lead Quantitative Analyst:** Aryan Manjhi (Integrated M.Tech, IIT ISM Dhanbad)  
+**Lead Quantitative Analyst:** Aryan Manjhi (Integrated B.Tech + M.Tech in IT, ABV-IIITM Gwalior)  
 **Document Classification:** Confidential Commercial Proposal & Methodology Feasibility Brief  
 
 ---

@@ -204,5 +204,5 @@ This project demonstrates the core quantitative, commercial, and technical compe
 
 ---
 
-**Author:** Aryan Manjhi (Integrated M.Tech, Mathematics & Computing, IIT ISM Dhanbad)  
+**Author:** Aryan Manjhi (Integrated B.Tech + M.Tech in IT, ABV-IIITM Gwalior)  
 **GitHub:** [github.com/KiskuAryan](https://github.com/KiskuAryan)

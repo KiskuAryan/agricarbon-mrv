@@ -33,7 +33,7 @@ def generate_pdd_markdown(metrics: Dict[str, Any], output_path: Path):
         "**Target Host Geography:** Indo-Gangetic Basin (India) & Southeast Asia (Mekong Delta & Central Luzon)  ",
         "**Standard & Methodology:** Verra VCS (CDM AMS-III.AU) / J-Credit Scheme (AG-001)  ",
         "**Project Developer:** AgriCarbon Project Consortium / Nature-Based Solutions Developer  ",
-        "**Lead Quantitative Analyst:** Aryan Manjhi (Integrated M.Tech, IIT ISM Dhanbad)  ",
+        "**Lead Quantitative Analyst:** Aryan Manjhi (Integrated B.Tech + M.Tech in IT, ABV-IIITM Gwalior)  ",
         "**Document Classification:** Confidential Commercial Proposal & Methodology Feasibility Brief  ",
         "",
         "---",
@@ -147,6 +147,29 @@ def generate_pdd_markdown(metrics: Dict[str, Any], output_path: Path):
 
 
 if __name__ == "__main__":
-    out_file = Path(__file__).resolve().parent.parent / "outputs" / "PDD_Executive_Proposal.md"
-    generate_pdd_markdown({}, out_file)
-    print(f"Generated updated PDD Executive Proposal -> {out_file}")
+    import sys
+    import pandas as pd
+    sys.path.append(str(Path(__file__).resolve().parent.parent))
+    from src.methodology_engine import CarbonMethodologyEngine
+    from src.financial_model import AgriCarbonFinancialModel
+    
+    data_file = Path(__file__).resolve().parent.parent / "data" / "farm_clusters.csv"
+    if data_file.exists():
+        df_raw = pd.read_csv(data_file)
+        engine = CarbonMethodologyEngine()
+        portfolio_df = engine.process_portfolio(df_raw)
+        
+        fin_model = AgriCarbonFinancialModel()
+        fin_summary = fin_model.evaluate_season_economics(portfolio_df)
+        
+        live_metrics = {
+            **fin_summary,
+            "baseline_tco2e": portfolio_df["baseline_tco2e"].sum(),
+            "project_tco2e": portfolio_df["project_tco2e"].sum(),
+            "gross_ch4_reduction_tco2e": portfolio_df["gross_ch4_reduction_tco2e"].sum(),
+            "n2o_rebound_penalty_tco2e": portfolio_df["n2o_rebound_penalty_tco2e"].sum()
+        }
+        
+        out_file = Path(__file__).resolve().parent.parent / "outputs" / "PDD_Executive_Proposal.md"
+        generate_pdd_markdown(live_metrics, out_file)
+        print(f"Generated live-synchronized PDD Executive Proposal -> {out_file}")
