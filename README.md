@@ -100,9 +100,11 @@ Where:
 
 ---
 
-## 📊 Portfolio Baseline vs. Project Metrics
+## 📊 Reference Portfolio Case Study (Default Benchmark)
 
-| Metric | Single Season Portfolio (25 Cooperatives) | Unit |
+> **Note:** The figures below reflect the included reference portfolio (`data/farm_clusters.csv`, generated with `seed=42` covering 23,015 ha under standard default assumptions: 88% AWD compliance, ¥3,500/tCO₂e, 55% farmer share). Running the interactive Streamlit dashboard (`app.py`) allows real-time dynamic re-computation as sliders are adjusted.
+
+| Metric | Single Season Reference Portfolio (25 Cooperatives) | Unit |
 | :--- | :--- | :--- |
 | **Aggregated Farm Area** | **23,015** | Hectares (ha) |
 | **Participating Smallholders** | **16,387** | Smallholder Families |
@@ -121,22 +123,22 @@ Where:
 The financial model projects commercial cash flows, unit economics, and benefit-sharing:
 
 - **Carbon Price:** ¥3,500 / $\text{tCO}_2\text{e}$ (~$22.58 USD at 155 JPY/USD).
-- **Gross Seasonal Revenue:** **JPY 100,653,350 (~$649,376 USD)**.
-- **Smallholder Benefit Sharing (55%):** **$357,157 USD** distributed directly to smallholders (~$25–$30 USD supplementary cash transfer per farming family).
-- **MRV & Monitoring Costs:** $4.50/ha ground telemetry + $1.50/ha Sentinel-1 SAR cloud analytics + $3.00/ha local coop management.
-- **Registry & Audit Fees:** $20,000 fixed VVB validation audit fee + $0.25/credit issuance fee.
-- **Developer Seasonal EBITDA:** **$78,430 USD (+12.1% margin)**.
-- **Annual Developer EBITDA (2 Seasons):** **$156,860 USD / year**.
+- **Gross Seasonal Revenue:** **JPY 116,498,795 (~$751,605 USD)**.
+- **Smallholder Benefit Sharing (55%):** **$413,383 USD** distributed directly to smallholders (~$25.2 USD supplementary cash transfer per farming family per season).
+- **MRV & Monitoring Costs:** $4.50/ha ground telemetry + $1.50/ha Sentinel-1 SAR cloud analytics + $3.00/ha local coop management ($207,135 USD).
+- **Registry & Audit Fees:** $20,000 fixed VVB validation audit fee + $0.25/credit issuance fee ($28,321 USD).
+- **Developer Seasonal EBITDA:** **$102,766 USD (+13.7% margin)**.
+- **Annual Developer EBITDA (2 Seasons):** **$205,532 USD / year**.
 
 ### 5-Year Scaling Projection
 
 | Horizon | Farm Area (ha) | Annual Credits ($\text{tCO}_2\text{e}$) | Gross Revenue (USD) | Farmer Share (USD) | Net EBITDA (USD) | Cumulative Cash (USD) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Year 1** | 20,689 | 57,516 | $1,298,753 | $714,314 | $156,860 | $156,860 |
-| **Year 2** | 37,240 | 103,529 | $2,337,755 | $1,285,765 | $356,890 | $513,750 |
-| **Year 3** | 66,205 | 184,052 | $4,156,009 | $2,285,805 | $792,440 | $1,306,190 |
-| **Year 4** | 103,445 | 287,581 | $6,493,764 | $3,571,570 | $1,475,320 | $2,781,510 |
-| **Year 5** | 155,168 | 431,372 | $9,740,646 | $5,357,355 | $2,490,110 | $5,271,620 |
+| **Year 1** | 23,015 | 66,570 | $1,503,210 | $826,766 | $205,532 | $205,532 |
+| **Year 2** | 41,427 | 119,828 | $2,705,778 | $1,488,179 | $420,816 | $626,348 |
+| **Year 3** | 73,648 | 213,026 | $4,810,272 | $2,645,651 | $838,533 | $1,464,881 |
+| **Year 4** | 115,075 | 332,854 | $7,516,050 | $4,133,830 | $1,451,481 | $2,916,362 |
+| **Year 5** | 172,612 | 499,280 | $11,274,075 | $6,200,745 | $2,389,132 | $5,305,494 |
 
 ---
 
