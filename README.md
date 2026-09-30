@@ -88,8 +88,15 @@ Where $SF_{w,\text{eff}} = (\text{Compliance} \times 0.52) + ((1 - \text{Complia
 
 ### 3. Net Certified Carbon Credits ($\text{Credits}_{\text{issued}}$)
 $$\Delta E_{\text{gross}} = E_{\text{base}} - E_{\text{proj}}$$
-$$\Delta E_{\text{net}} = \Delta E_{\text{gross}} \times (1 - \text{Penalty}_{\text{N}_2\text{O}, 8\%})$$
-$$\text{Credits}_{\text{issued}} = \Delta E_{\text{net}} \times (1 - \text{Uncertainty}_{5\%}) \times (1 - \text{Buffer Pool}_{10\%})$$
+
+$$\Delta E_{\text{net}} = \Delta E_{\text{gross}} \times (1 - D_{\text{N2O}})$$
+
+$$\text{Credits}_{\text{issued}} = \Delta E_{\text{net}} \times (1 - D_{\text{unc}}) \times (1 - D_{\text{buf}})$$
+
+Where:
+- $D_{\text{N2O}} = 0.08$ (8.0% conservative $\text{N}_2\text{O}$ aerobic rebound deduction)
+- $D_{\text{unc}} = 0.05$ (5.0% measurement uncertainty deduction per Verra rules)
+- $D_{\text{buf}} = 0.10$ (10.0% non-permanence risk buffer pool reserve)
 
 ---
 
@@ -97,15 +104,15 @@ $$\text{Credits}_{\text{issued}} = \Delta E_{\text{net}} \times (1 - \text{Uncer
 
 | Metric | Single Season Portfolio (25 Cooperatives) | Unit |
 | :--- | :--- | :--- |
-| **Aggregated Farm Area** | **20,689** | Hectares (ha) |
-| **Participating Smallholders** | **14,500+** | Smallholder Families |
-| **Gross Methane ($\text{CH}_4$) Avoided** | **1,310.4** | Metric tons $\text{CH}_4$ |
-| **Baseline GHG Footprint** | **104,116.8** | $\text{tCO}_2\text{e}$ |
-| **Project GHG Footprint (AWD)** | **67,556.7** | $\text{tCO}_2\text{e}$ |
-| **Gross Methane Reduction** | **36,560.1** | $\text{tCO}_2\text{e}$ |
-| **$\text{N}_2\text{O}$ Rebound Deduction (8%)** | **-2,924.8** | $\text{tCO}_2\text{e}$ |
-| **Net Certified Carbon Credits Issued** | **28,758.1** | $\text{tCO}_2\text{e}$ / season |
-| **Verified Credit Yield** | **~1.39** | $\text{tCO}_2\text{e}$ / ha / season |
+| **Aggregated Farm Area** | **23,015** | Hectares (ha) |
+| **Participating Smallholders** | **16,387** | Smallholder Families |
+| **Gross Methane ($\text{CH}_4$) Avoided** | **1,525.6** | Metric tons $\text{CH}_4$ |
+| **Baseline GHG Footprint** | **102,500.6** | $\text{tCO}_2\text{e}$ |
+| **Project GHG Footprint (AWD)** | **63,341.2** | $\text{tCO}_2\text{e}$ |
+| **Gross GHG Abatement** | **42,564.6** | $\text{tCO}_2\text{e}$ |
+| **$\text{N}_2\text{O}$ Rebound Deduction (8%)** | **-3,405.2** | $\text{tCO}_2\text{e}$ |
+| **Net Certified Carbon Credits Issued** | **33,285.4** | $\text{tCO}_2\text{e}$ / season |
+| **Verified Credit Yield** | **1.45** | $\text{tCO}_2\text{e}$ / ha / season |
 
 ---
 
